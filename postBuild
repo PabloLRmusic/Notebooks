@@ -1,6 +1,6 @@
 #!/bin/bash
 
+set -e
+
 sudo add-apt-repository ppa:mscore-ubuntu/mscore3-stable
 sudo apt-get install musescore3
-
-exec "$@"
