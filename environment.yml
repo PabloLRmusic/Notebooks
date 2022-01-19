@@ -1,0 +1,9 @@
+name: prueba1
+channels:
+  - conda-forge
+dependencies:
+  - musescore3
+  - python
+  - pip
+  - pip:
+    - music21
