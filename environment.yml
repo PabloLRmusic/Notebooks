@@ -2,6 +2,7 @@ name: prueba1
 channels:
   - conda-forge
 dependencies:
+  - mscore
   - python
   - pip
   - pip:
