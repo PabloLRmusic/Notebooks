@@ -1,2 +1,0 @@
-ppa:mscore-ubuntu/mscore3-stable
-musescore3
