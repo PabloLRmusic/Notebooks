@@ -7,3 +7,4 @@ dependencies:
   - pip
   - pip:
     - music21
+    - ms3
