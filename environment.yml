@@ -2,8 +2,7 @@ name: prueba1
 channels:
   - conda-forge
 dependencies:
-  - ppa:mscore-ubuntu/mscore3-stable
-  - musescore3
+  - musescore
   - python
   - pip
   - pip:
