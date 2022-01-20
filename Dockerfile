@@ -1,7 +1,7 @@
 FROM jupyter/scipy-notebook:latest
 
 
-ARG NB_USER=tmp_user
+ARG NB_USER=jovyan
 ARG NB_UID=1000
 #ENV USER ${NB_USER}
 #ENV NB_UID ${NB_UID}
