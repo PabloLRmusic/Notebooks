@@ -1,6 +1,6 @@
 FROM jupyter/scipy-notebook:latest
 
-RUN adduser --disabled-password \
+RUN ROOT adduser --disabled-password \
     --gecos "Default user" \
     --uid ${NB_UID} \
     ${NB_USER}
