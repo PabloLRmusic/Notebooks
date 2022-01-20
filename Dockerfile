@@ -1,5 +1,12 @@
 FROM jupyter/scipy-notebook:latest
 
+
+ARG NB_USER=jovyan
+ARG NB_UID=1000
+ENV USER ${NB_USER}
+ENV NB_UID ${NB_UID}
+ENV HOME /home/${NB_USER}
+
 RUN ROOT adduser --disabled-password \
     --gecos "Default user" \
     --uid ${NB_UID} \
@@ -25,11 +32,5 @@ RUN apt-get update && \
 RUN add-apt-repository ppa:mscore-ubuntu/mscore3-stable
 
 RUN apt install musescore3
-
-ARG NB_USER=jovyan
-ARG NB_UID=1000
-ENV USER ${NB_USER}
-ENV NB_UID ${NB_UID}
-ENV HOME /home/${NB_USER}
 
 
