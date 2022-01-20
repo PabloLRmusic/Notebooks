@@ -8,12 +8,7 @@ RUN pip install --no-cache-dir music21==7.1.0
 
 #RUN pip install --no-cache-dir jupyterhub
 
-RUN apt-get update && \
-    apt-get install -y software-properties-common && \
-    rm -rf /var/lib/apt/lists/*
-
 RUN add-apt-repository ppa:mscore-ubuntu/mscore3-stable
-
 RUN apt install musescore3
 
 ARG NB_USER=jovyan
