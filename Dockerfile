@@ -1,4 +1,4 @@
-FROM jupyter/scipy-notebook:ab91b1adcf665c40a70f0d110931097e6dd296d734d04fb2a1d5f0dc8febe02f
+FROM jupyter/scipy-notebook:latest
 
 RUN python -m pip install --upgrade pip
 
