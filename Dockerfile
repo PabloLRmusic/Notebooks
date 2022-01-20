@@ -6,10 +6,10 @@ RUN pip install --no-cache-dir notebook
 
 RUN pip install --no-cache-dir music21==7.1.0
 
-RUN apt install software-properties-common
-RUN apt-get update
-RUN add-apt-repository ppa:mscore-ubuntu/mscore3-stable
-RUN apt-get update
+#RUN apt install software-properties-common
+#RUN apt-get update
+#RUN add-apt-repository ppa:mscore-ubuntu/mscore3-stable
+#RUN apt-get update
 RUN apt install musescore3
 
 ARG NB_USER=jovyan
