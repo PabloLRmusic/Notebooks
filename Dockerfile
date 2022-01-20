@@ -1,10 +1,8 @@
 FROM jupyter/scipy-notebook:cf6258237ff9
 
+RUN python -m pip install --upgrade pip
+
 RUN pip install --no-cache-dir notebook
-
-RUN pip install python3
-
-RUN pip install --upgrade pip
 
 RUN pip install --no-cache-dir music21==7.1.0
 
