@@ -1,16 +1,21 @@
 FROM jupyter/scipy-notebook:latest
 
 
-ARG NB_USER=jovyan
+ARG NB_USER=tmp_user
 ARG NB_UID=1000
-ENV USER ${NB_USER}
-ENV NB_UID ${NB_UID}
-ENV HOME /home/${NB_USER}
+#ENV USER ${NB_USER}
+#ENV NB_UID ${NB_UID}
+#ENV HOME /home/${NB_USER}
 
-RUN adduser --disabled-password \
-    --gecos "Default user" \
-    --uid ${NB_UID} \
-    ${NB_USER}
+
+RUN useradd -rm -d /home/${NB_USER} -s /bin/bash -g root -G sudo -u ${NB_UID} ${NB_USER}
+USER ${NB_USER}
+WORKDIR /home/${NB_USER}
+
+#RUN adduser --disabled-password \
+    #--gecos "Default user" \
+    #--uid ${NB_UID} \
+    #${NB_USER}
 
 COPY . ${HOME}
 USER root
