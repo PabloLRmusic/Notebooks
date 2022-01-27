@@ -11,7 +11,7 @@ RUN apt-get update; \
     apt-get install -y lilypond; \
     apt-get install -y musescore; \
     rm -rf /var/lib/apt/lists/*
-ARG NB_USER=jovyan
+ARG NB_USER=visitor
 ARG NB_UID=1000
 ENV USER ${NB_USER}
 ENV NB_UID ${NB_UID}
