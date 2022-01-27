@@ -13,8 +13,8 @@
   <localCorpusSettings />
   <preference name="manualCoreCorpusPath" />
   <preference name="midiPath" />
-  <preference name="musescoreDirectPNGPath" value="/usr/bin/musescore" />
-  <preference name="musicxmlPath" value="/usr/bin/musescore" />
+  <preference name="musescoreDirectPNGPath" value="/usr/bin/musescore3" />
+  <preference name="musicxmlPath" value="/usr/bin/musescore3" />
   <preference name="pdfPath" />
   <preference name="showFormat" value="musicxml" />
   <preference name="vectorPath" />
