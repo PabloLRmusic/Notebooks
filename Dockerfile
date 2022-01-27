@@ -7,7 +7,7 @@ RUN apt-get update; \
     apt-get update; \
     apt-get install -y musescore3; \
     rm -rf /var/lib/apt/lists/*
-USER jovyan
+USER $NB_UID
 ENV QT_QPA_PLATFORM=offscreen
 RUN python -c "from music21 import * ; us = environment.UserSettings(); \
 us['musescoreDirectPNGPath'] = '/home/jovyan'; \ 
