@@ -9,4 +9,4 @@ RUN apt-get update; \
     rm -rf /var/lib/apt/lists/*
 USER jovyan
 ENV QT_QPA_PLATFORM=offscreen
-RUN python -c "from music21 import *; us = environment.UserSettings(); environment.set('pdfPath', '/usr/bin/musescore3'); environment.set('graphicsPath', '/usr/bin/musescore3'); environment.set('musescoreDirectPNGPath', '/usr/bin/musescore3'); environment.set('musicxmlPath', '/usr/bin/musescore3');"
+RUN python -c "from music21 import *; us = environment.UserSettings(); s['musescoreDirectPNGPath'] = '/home/jovyan'; environment.set('pdfPath', '/usr/bin/musescore3'); environment.set('graphicsPath', '/usr/bin/musescore3'); environment.set('musescoreDirectPNGPath', '/usr/bin/musescore3'); environment.set('musicxmlPath', '/usr/bin/musescore3');"
