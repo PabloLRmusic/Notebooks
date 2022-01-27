@@ -9,7 +9,7 @@ RUN apt-get update; \
     apt-get update; \
     apt-get install -y lilypond; \
     apt-get install -y musescore3; \
-    rm -rf /var/lib/apt/lists/*
+    #rm -rf /var/lib/apt/lists/*
 USER jovyan
 
 ENV QT_QPA_PLATFORM=offscreen
