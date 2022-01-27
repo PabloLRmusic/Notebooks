@@ -1,4 +1,4 @@
-FROM jupyter/scipy-notebook:
+FROM jupyter/scipy-notebook:f6fb063c2b0b
 
 RUN pip install music21
 
