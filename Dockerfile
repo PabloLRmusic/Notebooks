@@ -1,5 +1,6 @@
 FROM jupyter/scipy-notebook
 RUN pip install music21
+USER ROOT
 RUN apt-get update; \
     apt-get install -y software-properties-common; \
     add-apt-repository ppa:mscore-ubuntu/mscore3-stable; \
