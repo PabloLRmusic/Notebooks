@@ -1,4 +1,4 @@
-FROM jupyter/scipy-notebook
+FROM FROM jupyter/scipy-notebook:cf6258237ff9
 
 RUN pip install music21
 
@@ -11,7 +11,15 @@ RUN apt-get update; \
     apt-get install -y lilypond; \
     apt-get install -y musescore; \
     rm -rf /var/lib/apt/lists/*
-#USER jovyan
-#COPY ./music21rc /home/jovyan/.music21rc
-#ENV QT_QPA_PLATFORM=offscreen
+ARG NB_USER=jovyan
+ARG NB_UID=1000
+ENV USER ${NB_USER}
+ENV NB_UID ${NB_UID}
+ENV HOME /home/${NB_USER}
+
+RUN adduser --disabled-password \
+    --gecos "Default user" \
+    --uid ${NB_UID} \
+    ${NB_USER}
+   
 RUN python -c "from music21 import environment; us = environment.UserSettings(); us['musescoreDirectPNGPath'] = '/home/jovyan/work'; us['musicxmlPath'] = '/usr/bin/mscore'; us['lilypondPath'] = '/usr/bin/lilypond';"
