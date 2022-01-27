@@ -1,4 +1,4 @@
-FROM jupyter/scipy-notebook
+FROM jupyter/scipy-notebook/latest
 
 ENV NB_USER jovyan
 ENV NB_UID 1000
