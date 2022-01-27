@@ -7,8 +7,7 @@ RUN apt-get update; \
     apt-get install -y software-properties-common; \
     add-apt-repository ppa:mscore-ubuntu/mscore3-stable; \
     apt-get update; \
-    apt-get install -y lilypond; \
-    apt-get install -y musescore; \
+    apt-get install -y musescore3; \
     rm -rf /var/lib/apt/lists/*
 USER jovyan
 #COPY ./music21rc /home/jovyan/.music21rc
