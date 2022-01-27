@@ -5,6 +5,7 @@ RUN pip install music21
 USER root
 RUN apt-get update; \
     apt-get install -y software-properties-common; \
+    apt-get install -y apt-utils; \
     add-apt-repository ppa:mscore-ubuntu/mscore-stable; \
     apt-get update; \
     apt-get install -y lilypond; \
