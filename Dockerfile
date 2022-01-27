@@ -1,8 +1,15 @@
-FROM jupyter/scipy-notebook/latest
+FROM jupyter/scipy-notebook
 
 ENV NB_USER jovyan
 ENV NB_UID 1000
+ENV USER ${NB_USER}
+ENV NB_UID ${NB_UID}
 ENV HOME /home/${NB_USER}
+# copying contents from repo to binder
+COPY . ${HOME}
+USER root
+RUN chown -R ${NB_UID} ${HOME}
+USER ${NB_USER}
 
 USER $NB_UID
 
