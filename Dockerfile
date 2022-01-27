@@ -26,7 +26,7 @@ RUN apt-get update; \
     
 USER $NB_UID
 
-#ENV QT_QPA_PLATFORM=offscreen
+ENV QT_QPA_PLATFORM=offscreen
 RUN python -c "from music21 import * ; us = environment.UserSettings(); \
 us['musescoreDirectPNGPath'] = '/usr/bin/musescore3'; \ 
 us['pdfPath'] = '/usr/bin/musescore3'; \
