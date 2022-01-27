@@ -8,7 +8,7 @@ RUN apt-get update; \
     add-apt-repository ppa:mscore-ubuntu/mscore3-stable; \
     apt-get update; \
     apt-get install -y lilypond; \
-    apt-get install -y musescore3; \
+    apt-get install -y musescore3
     #rm -rf /var/lib/apt/lists/*
 USER jovyan
 
