@@ -10,7 +10,9 @@ RUN pip install --no-cache-dir music21==7.1.0
 #RUN apt-get update
 #RUN add-apt-repository ppa:mscore-ubuntu/mscore3-stable
 #RUN apt-get update
-RUN apt install musescore3
+#RUN apt install musescore3
+RUN pip install matplotlib
+RUN pip install numpy
 
 ARG NB_USER=jovyan
 ARG NB_UID=1000
