@@ -25,7 +25,8 @@ RUN apt-get update; \
     apt-get update; \
     apt-get install -y musescore3; \
     apt-get install -y nodejs; \
-    rm -rf /var/lib/apt/lists/*
+    rm -rf /var/lib/apt/lists/*; \
+    apt-get clean
     
 USER $NB_UID
 
