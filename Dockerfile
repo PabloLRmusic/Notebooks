@@ -13,7 +13,9 @@ USER ${NB_USER}
 
 USER $NB_UID
 
-RUN pip install music21
+RUN pip install music21; \
+    pip install IPython; \
+    pip install ipywidgets
 
 USER root
 
@@ -22,6 +24,7 @@ RUN apt-get update; \
     add-apt-repository ppa:mscore-ubuntu/mscore3-stable; \
     apt-get update; \
     apt-get install -y musescore3; \
+    apt-get install -y nodejs; \
     rm -rf /var/lib/apt/lists/*
     
 USER $NB_UID
