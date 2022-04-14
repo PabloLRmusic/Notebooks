@@ -15,7 +15,8 @@ USER $NB_UID
 
 RUN pip install music21; \
     pip install IPython; \
-    pip install ipywidgets
+    pip install ipywidgets; \
+    pip install openpyxl
 
 USER root
 
